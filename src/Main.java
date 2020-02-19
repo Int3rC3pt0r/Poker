@@ -188,16 +188,17 @@ public class Main {
 				highCard++;
 			}
 		}
-		System.out.println("High Card:\t" + highCard);
-		System.out.println("Pair:\t\t" + onePair);
-		System.out.println("Two Pairs:\t" + twoPair);
-		System.out.println("Three:\t\t" + three);
-		System.out.println("Straight:\t" + straight);
-		System.out.println("Flush:\t\t" + flush);
-		System.out.println("Full House:\t" + house);
-		System.out.println("Four:\t\t" + four);
-		System.out.println("Straight Flush:\t" + straightFlush);
-		System.out.println("Royal Flush:\t" + royalFlush);
+		System.out.println("Pokertrys: " + repeat);
+		System.out.println("High Card:\t" + highCard + "\t" + ((double) highCard)/repeat * 100 + "%");
+		System.out.println("Pair:\t\t" + onePair + "\t" + ((double) onePair)/repeat * 100 + "%");
+		System.out.println("Two Pairs:\t" + twoPair + "\t" + ((double) twoPair)/repeat * 100 + "%");
+		System.out.println("Three:\t\t" + three + "\t" + ((double) three)/repeat * 100 + "%");
+		System.out.println("Straight:\t" + straight + "\t" + ((double) straight)/repeat * 100 + "%");
+		System.out.println("Flush:\t\t" + flush + "\t" + ((double) flush)/repeat * 100 + "%");
+		System.out.println("Full House:\t" + house + "\t" + ((double) house)/repeat * 100 + "%");
+		System.out.println("Four:\t\t" + four + "\t" + ((double) four)/repeat * 100 + "%");
+		System.out.println("Straight Flush:\t" + straightFlush + "\t" + ((double) straightFlush)/repeat * 100 + "%");
+		System.out.println("Royal Flush:\t" + royalFlush + "\t" + ((double) royalFlush)/repeat * 100 + "%");
 		
 	}
 
