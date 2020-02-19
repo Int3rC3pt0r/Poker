@@ -6,6 +6,7 @@ public class Main {
 	private static int worth = 13;
 	private static int size = color * worth;
 	private static int handSize = 5;
+	private static int repeat = 10000;
 	
 	static ArrayList<Integer> cardPack = new ArrayList<Integer>();
 	
@@ -93,7 +94,7 @@ public class Main {
 		return same;
 	}
 	
-	public static int isStreet(ArrayList<Integer> list) {
+	public static int isStraight(ArrayList<Integer> list) {
 		boolean street = true;
 		boolean sameColor = true;
 		list = insertionSortWorth(list);
@@ -102,21 +103,24 @@ public class Main {
 				street = false;
 			}
 		}
-		if(street) {
-			for(int i = 0; i < list.size()-1; i++) {
-				if(list.get(i)/worth != list.get(i+1)/worth) {
-					sameColor = false;
-				}
+		for(int i = 0; i < list.size()-1; i++) {
+			if(list.get(i)/worth != list.get(i+1)/worth) {
+				sameColor = false;
 			}
+		}
+		if(street) {
 			if(sameColor && list.get(list.size()-1)%13 == 12) {
-				return 3;
+				return 4;
 			}
 			else if(sameColor){
-				return 2;
+				return 3;
 			}
 			else {
-				return 1;
+				return 2;
 			}
+		}
+		else if(sameColor){
+			return 1;
 		}
 		else {
 			return 0;
@@ -132,15 +136,67 @@ public class Main {
 		ArrayList<Integer> hand = new ArrayList<Integer>();
 		hand = rdmCards();
 		hand = insertionSort(hand);
-		while(isStreet(hand) < 2) {
+		
+		int highCard = 0;
+		int onePair = 0;
+		int twoPair = 0;
+		int three = 0;
+		int four = 0;
+		int house = 0;
+		int straight = 0;
+		int flush = 0;
+		int straightFlush = 0;
+		int royalFlush = 0;
+
+		for(int i = 0; i < repeat; i++) {
 			hand = rdmCards();
 			hand = insertionSort(hand);
+			int same = countSame(hand);
+			int row = isStraight(hand);
+			if(countSame(hand) != 0) {
+				if(same == 2) {
+					onePair++;
+				}
+				else if(same == 4) {
+					twoPair++;
+				}
+				else if(same == 6) {
+					three++;
+				}
+				else if(same == 8) {
+					house++;
+				}
+				else if(same == 12) {
+					four++;
+				}
+			}
+			else if(row != 0) {
+				if(row == 1) {
+					flush++;
+				}
+				else if(row == 2) {
+					straight++;
+				}
+				else if(row == 3) {
+					straightFlush++;
+				}
+				else if(row == 4) {
+					royalFlush++;
+				}
+			}
+			else {
+				highCard++;
+			}
 		}
-		print(hand);
-		printColor(hand);
-		printWorth(hand);
-		System.out.println(isStreet(hand));
-		
+		System.out.println(highCard);
+		System.out.println(onePair);
+		System.out.println(twoPair);
+		System.out.println(three);
+		System.out.println(four);
+		System.out.println(flush);
+		System.out.println(straight);
+		System.out.println(straightFlush);
+		System.out.println(royalFlush);
 		
 	}
 
