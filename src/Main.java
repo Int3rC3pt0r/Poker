@@ -6,7 +6,7 @@ public class Main {
 	private static int worth = 13;
 	private static int size = color * worth;
 	private static int handSize = 5;
-	private static int repeat = 10000;
+	private static int repeat = 1000000;
 	
 	static ArrayList<Integer> cardPack = new ArrayList<Integer>();
 	
@@ -188,15 +188,16 @@ public class Main {
 				highCard++;
 			}
 		}
-		System.out.println(highCard);
-		System.out.println(onePair);
-		System.out.println(twoPair);
-		System.out.println(three);
-		System.out.println(four);
-		System.out.println(flush);
-		System.out.println(straight);
-		System.out.println(straightFlush);
-		System.out.println(royalFlush);
+		System.out.println("High Card:\t" + highCard);
+		System.out.println("Pair:\t\t" + onePair);
+		System.out.println("Two Pairs:\t" + twoPair);
+		System.out.println("Three:\t\t" + three);
+		System.out.println("Straight:\t" + straight);
+		System.out.println("Flush:\t\t" + flush);
+		System.out.println("Full House:\t" + house);
+		System.out.println("Four:\t\t" + four);
+		System.out.println("Straight Flush:\t" + straightFlush);
+		System.out.println("Royal Flush:\t" + royalFlush);
 		
 	}
 
