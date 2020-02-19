@@ -67,6 +67,19 @@ public class Main {
 		}
 		return list;
 	}
+	public static ArrayList<Integer> insertionSortWorth(ArrayList<Integer> list) {
+		for (int i = 1; i < list.size(); i++) {
+			int v1 = list.get(i);
+			for (int j = 0; j < i; j++) {
+				if(v1%worth < list.get(j)%worth){
+					list.remove(i);
+					list.add(j,v1);
+					j = i;
+				}
+			}
+		}
+		return list;
+	}
 	
 	public static int countSame(ArrayList<Integer> list) {
 		int same = 0;
@@ -83,6 +96,7 @@ public class Main {
 	public static int isStreet(ArrayList<Integer> list) {
 		boolean street = true;
 		boolean sameColor = true;
+		list = insertionSortWorth(list);
 		for(int i = 0; i < list.size()-1; i++) {
 			if(list.get(i)%worth != list.get(i+1)%worth-1) {
 				street = false;
@@ -118,7 +132,7 @@ public class Main {
 		ArrayList<Integer> hand = new ArrayList<Integer>();
 		hand = rdmCards();
 		hand = insertionSort(hand);
-		while(isStreet(hand) < 1) {
+		while(isStreet(hand) < 2) {
 			hand = rdmCards();
 			hand = insertionSort(hand);
 		}
