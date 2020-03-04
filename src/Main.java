@@ -218,16 +218,17 @@ public class Main {
 //		System.out.println("Royal Flush:\t" + royalFlush + "	\t" + ((double) royalFlush)/repeat * 100 + "%\t" + pRoyalFlush + "%\t" + (((double) royalFlush)/repeat * 100 - pRoyalFlush));
 		
 		System.out.printf("Pokertrys: %d\n", repeat);
-		System.out.printf("High Card:\t%d\t%.4f\t%.3f\t\t%.6f\t%.4f\n",highCard, ((double) highCard)/repeat * 100, pHigh,(((double) highCard)/repeat * 100) - pHigh,(((double) highCard)/repeat * 100)/(pHigh/100)-100);
-		System.out.printf("Pair:\t\t%d\t%.4f\t%.3f\t\t%.6f\t%.4f\n",onePair, ((double) onePair)/repeat * 100, pPair,(((double) onePair)/repeat * 100) - pPair,(((double) onePair)/repeat * 100)/(pPair/100)-100);
-		System.out.printf("Two Pairs:\t%d\t%.4f\t%.4f\t\t%.6f\t%.4f\n",twoPair, ((double) twoPair)/repeat * 100, pTwoPair,(((double) twoPair)/repeat * 100) - pTwoPair,(((double) twoPair)/repeat * 100)/(pTwoPair/100)-100);
-		System.out.printf("Three:\t\t%d\t%.4f\t%.4f\t\t%.6f\t%.4f\n",three, ((double) three)/repeat * 100, pThree,(((double) three)/repeat * 100) - pThree,(((double) three)/repeat * 100)/(pThree/100)-100);
-		System.out.printf("Straight:\t%d\t%.4f\t%.4f\t\t%.6f\t%.4f\n",straight, ((double) straight)/repeat * 100, pStraight,(((double) straight)/repeat * 100) - pStraight,(((double) straight)/repeat * 100)/(pStraight/100)-100);
-		System.out.printf("Flush:\t\t%d\t%.4f\t%.4f\t\t%.6f\t%.4f\n",flush, ((double) flush)/repeat * 100, pFlush,(((double) flush)/repeat * 100) - pFlush,(((double) flush)/repeat * 100)/(pFlush/100)-100);
-		System.out.printf("Full House:\t%d\t%.4f\t%.4f\t\t%.6f\t%.4f\n",house, ((double) house)/repeat * 100, pFullHouse,(((double) house)/repeat * 100) - pFullHouse,(((double) house)/repeat * 100)/(pFullHouse/100)-100);
-		System.out.printf("Four:\t\t%d\t%.4f\t%.4f\t\t%.6f\t%.4f\n",four, ((double) four)/repeat * 100, pFour,(((double) four)/repeat * 100) - pFour,(((double) four)/repeat * 100)/(pFour/100)-100);
-		System.out.printf("Straight Flush:\t%d\t%.4f\t%.5f\t\t%.6f\t%.4f\n",straightFlush, ((double) straightFlush)/repeat * 100, pStraightFlush,(((double) straightFlush)/repeat * 100) - pStraightFlush,(((double) straightFlush)/repeat * 100)/(pStraightFlush/100)-100);
-		System.out.printf("Royal Flush:\t%d\t%.4f\t%.6f\t%.6f\t%.4f\n",royalFlush, ((double) royalFlush)/repeat * 100, pRoyalFlush,(((double) royalFlush)/repeat * 100) - pRoyalFlush,(((double) royalFlush)/repeat * 100)/(pRoyalFlush/100)-100);
+		System.out.println("Kombination\tAnzahl\tHaeufigkeit[%]\tWikiWerte[%]\tAbweichung\t% Abweichung");
+		System.out.printf("High Card:\t%d\t%.4f\t\t%.3f\t\t%.6f\t%.4f\n",highCard, ((double) highCard)/repeat * 100, pHigh,(((double) highCard)/repeat * 100) - pHigh,(((double) highCard)/repeat * 100)/(pHigh/100)-100);
+		System.out.printf("Pair:\t\t%d\t%.4f\t\t%.3f\t\t%.6f\t%.4f\n",onePair, ((double) onePair)/repeat * 100, pPair,(((double) onePair)/repeat * 100) - pPair,(((double) onePair)/repeat * 100)/(pPair/100)-100);
+		System.out.printf("Two Pairs:\t%d\t%.4f\t\t%.4f\t\t%.6f\t%.4f\n",twoPair, ((double) twoPair)/repeat * 100, pTwoPair,(((double) twoPair)/repeat * 100) - pTwoPair,(((double) twoPair)/repeat * 100)/(pTwoPair/100)-100);
+		System.out.printf("Three:\t\t%d\t%.4f\t\t%.4f\t\t%.6f\t%.4f\n",three, ((double) three)/repeat * 100, pThree,(((double) three)/repeat * 100) - pThree,(((double) three)/repeat * 100)/(pThree/100)-100);
+		System.out.printf("Straight:\t%d\t%.4f\t\t%.4f\t\t%.6f\t%.4f\n",straight, ((double) straight)/repeat * 100, pStraight,(((double) straight)/repeat * 100) - pStraight,(((double) straight)/repeat * 100)/(pStraight/100)-100);
+		System.out.printf("Flush:\t\t%d\t%.4f\t\t%.4f\t\t%.6f\t%.4f\n",flush, ((double) flush)/repeat * 100, pFlush,(((double) flush)/repeat * 100) - pFlush,(((double) flush)/repeat * 100)/(pFlush/100)-100);
+		System.out.printf("Full House:\t%d\t%.4f\t\t%.4f\t\t%.6f\t%.4f\n",house, ((double) house)/repeat * 100, pFullHouse,(((double) house)/repeat * 100) - pFullHouse,(((double) house)/repeat * 100)/(pFullHouse/100)-100);
+		System.out.printf("Four:\t\t%d\t%.4f\t\t%.4f\t\t%.6f\t%.4f\n",four, ((double) four)/repeat * 100, pFour,(((double) four)/repeat * 100) - pFour,(((double) four)/repeat * 100)/(pFour/100)-100);
+		System.out.printf("Straight Flush:\t%d\t%.4f\t\t%.5f\t\t%.6f\t%.4f\n",straightFlush, ((double) straightFlush)/repeat * 100, pStraightFlush,(((double) straightFlush)/repeat * 100) - pStraightFlush,(((double) straightFlush)/repeat * 100)/(pStraightFlush/100)-100);
+		System.out.printf("Royal Flush:\t%d\t%.4f\t\t%.6f\t%.6f\t%.4f\n",royalFlush, ((double) royalFlush)/repeat * 100, pRoyalFlush,(((double) royalFlush)/repeat * 100) - pRoyalFlush,(((double) royalFlush)/repeat * 100)/(pRoyalFlush/100)-100);
 		
 	}
 
